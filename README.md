@@ -1,24 +1,27 @@
 # Divera2Loxone
-Small Python REST Application for evaluating DIVERA 24/7 JSON Files and triggering URLs based on a simple logic
+Small Python REST Application for evaluating DIVERA 24/7 JSON Files and triggering URLs based on a simple logic. Originally this REST API was created to trigger Virtual Inputs on a Loxone Miniserver. But it can be used universally to trigger every URL via HTTP/GET. 
+In this Version, only the fields ```groups``` and ```priority``` are recognized. You can simply add more Fields by editing the config.json and the main Code on div2lox.py
 
-# Installation und Einrichtung der Flask-Anwendung
+Format of the DIVERA24/7 JSON File: 
+https://help.divera247.com/pages/viewpage.action?pageId=44171381
 
-Diese Anleitung beschreibt die Schritte zur Installation und Konfiguration einer Flask-Anwendung, die HTTPS nutzt und auf einem Linux-Server wie Ubuntu läuft.
+# Install this little Service
 
-## 1. Python installieren und Python Abhängigkeiten
+## 1. System Update and Python with the dependencies
 
 ```bash
 sudo apt update
+sudo apt upgrade
 sudo apt install python3 python3-venv python3-pip -y
 
 pip3 install flask requests
 ```
 
-## 2. Anpassen der Pfade und Umgebungen an das eigene System
+## 2. Customize Path und Enviromnents to your personal needs
 
-## 3. Systemd Dienst erstellen 
+## 3. Create Systemd Daemon
 
-## 4. Dienste neu laden, aktivieren und starten
+## 4. Reload Daemons und start the service
 
 ```bash
 sudo systemctl daemon-reload
