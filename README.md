@@ -7,7 +7,7 @@ https://help.divera247.com/pages/viewpage.action?pageId=44171381
 
 **You might consider running this Service behind a nginx reverse proxy due to security reasons.** 
 
-# Install this little Service
+## Prerequisites
 Copy the Folder Div2Lox on a location on your Filesystem where you want to run the Service, e.g. ```/opt/div2lox/```
 
 ## 1. System Update and Python with the dependencies
