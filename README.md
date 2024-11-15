@@ -10,7 +10,7 @@ https://help.divera247.com/pages/viewpage.action?pageId=44171381
 ## Prerequisites
 Copy the Folder Div2Lox on a location on your Filesystem where you want to run the Service, e.g. ```/opt/div2lox/```
 
-## 1. System Update and Python with the dependencies
+## 1. System Update and install Python with needed dependencies
 
 ```bash
 sudo apt update
