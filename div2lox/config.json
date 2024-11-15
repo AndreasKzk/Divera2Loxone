@@ -1,0 +1,46 @@
+{
+    "server": {
+        "host": "0.0.0.0",
+        "port": 8443,
+        "ssl_certificate": "/path/to/cert.crt",
+        "ssl_key": "/path/to/key.key"
+    },
+    "groups": [
+        {
+            "required_groups": [12345, 123456],
+            "urls": [
+                "https://someurltocall.com/command/action1",
+                "https://someurltocall.com/command/action2",
+                "https://someurltocall.com/command/action3"
+            ]
+        },
+        {
+            "required_groups": [12345],
+            "urls": [
+                "https://someurltocall.com/command/action4",
+                "https://someurltocall.com/command/action5"
+            ]
+        },
+        {
+            "required_groups": [123456],
+            "urls": [
+                "https://someurltocall.com/command/action6",
+                "https://someurltocall.com/command/action7"
+            ]
+        }
+    ],
+    "priority": [
+        {
+            "required_priority": [1],
+            "urls": [
+                "https://someurltocall.com/command/action8"
+            ]
+        },
+        {
+            "required_priority": [0],
+            "urls": [
+                "https://someurltocall.com/command/action9"
+            ]
+        }
+    ]
+}
