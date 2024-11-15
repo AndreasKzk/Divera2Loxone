@@ -22,6 +22,6 @@ pip3 install flask requests
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl start ampelctl.service
-sudo systemctl enable ampelctl.service
+sudo systemctl enable div2lox.service
+sudo systemctl start div2lox.service
 ```
