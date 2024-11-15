@@ -5,7 +5,7 @@ In this Version, only the fields ```groups``` and ```priority``` are recognized.
 Format of the DIVERA24/7 JSON File: 
 https://help.divera247.com/pages/viewpage.action?pageId=44171381
 
-**You might consider running the Service behind a nginx reverse proxy due to security reasons.** 
+**You might consider running this Service behind a nginx reverse proxy due to security reasons.** 
 
 # Install this little Service
 Copy the Folder Div2Lox on a location on your Filesystem where you want to run the Service, e.g. ```/opt/div2lox/```
