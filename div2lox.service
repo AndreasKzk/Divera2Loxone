@@ -1,0 +1,15 @@
+[Unit]
+Description=REST API Service for DIVERA24/7 JSON Objects
+After=network.target
+
+[Service]
+User=yourusername
+Group=yourusergroup
+Environment="PYTHONPATH=/home/youruser/.local/lib/python3.10/site-packages"
+ExecStart=/usr/bin/python3 /path/toapp/div2lox.py
+WorkingDirectory=/path/toapp/
+Restart=always
+Environment="PYTHONUNBUFFERED=1"
+
+[Install]
+WantedBy=multi-user.target
