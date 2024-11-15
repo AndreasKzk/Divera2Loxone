@@ -1,5 +1,5 @@
 # Divera2Loxone
-Small Python REST Application running on Linux (tested with Ubuntu 22.04) for evaluating DIVERA 24/7 JSON Files and triggering URLs based on a simple logic. Originally this REST API was created to trigger Virtual Inputs on a Loxone Miniserver. But it can be used universally to trigger every URL via HTTP/GET. 
+Small Python REST Application running on Linux (tested with Ubuntu 22.04) creating an Endpoint ```/api``` for evaluating DIVERA 24/7 JSON Files and triggering URLs based on a simple logic. Originally this REST API was created to trigger Virtual Inputs on a Loxone Miniserver. But it can be used universally to trigger every URL via HTTP/GET. 
 In this Version, only the fields ```groups``` and ```priority``` are recognized. You can simply add more fields by editing the config.json and the main Code on ```div2lox.py```
 
 Format of the DIVERA24/7 JSON File: 
@@ -32,4 +32,20 @@ Copy ```div2lox.service``` to ```/etc/systemd/system``` and customize User, Grou
 sudo systemctl daemon-reload
 sudo systemctl enable div2lox.service
 sudo systemctl start div2lox.service
+```
+## 5. Test your Service
+You can simply test your Endpoint with cURL on your commandline:
+```bash
+curl -k -X POST https://yourhostorip:yourport/api \
+-H "Content-Type: application/json" \
+-d '{
+  "group": ["12345", "123456"],
+  "priority": 1
+}'
+```
+
+## 5. Make Changes
+After every change on your ```config.json``` or your main ```div2lox.py``` you will need to restart your service using:
+```bash
+sudo systemctl restart div2lox.service
 ```
