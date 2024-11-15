@@ -1,6 +1,6 @@
 # Divera2Loxone
 Small Python REST Application running on Linux (tested with Ubuntu 22.04) for evaluating DIVERA 24/7 JSON Files and triggering URLs based on a simple logic. Originally this REST API was created to trigger Virtual Inputs on a Loxone Miniserver. But it can be used universally to trigger every URL via HTTP/GET. 
-In this Version, only the fields ```groups``` and ```priority``` are recognized. You can simply add more fields by editing the config.json and the main Code on div2lox.py
+In this Version, only the fields ```groups``` and ```priority``` are recognized. You can simply add more fields by editing the config.json and the main Code on ```div2lox.py```
 
 Format of the DIVERA24/7 JSON File: 
 https://help.divera247.com/pages/viewpage.action?pageId=44171381
